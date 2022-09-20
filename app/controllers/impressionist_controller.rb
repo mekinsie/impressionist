@@ -60,7 +60,7 @@ module ImpressionistController
         :session_hash => session_hash,
         :ip_address => request.remote_ip,
         :referrer => request.referer,
-        :params => filter.filter(params_hash)
+        :params => filter.filter(params_hash).to_json
         )
     end
 
